@@ -1,0 +1,289 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto; 
+  background-color: #000;
+}
+
+/* HEADER */
+header {
+  background-color: #000;
+  padding: 10px; /**/
+  display: flex; /*Colunas uma do lado da outra*/
+  align-items: center; /**/
+  justify-content: space-around; /* Separado em colunas*/
+}
+
+header h1 {
+  color: #dc3545;
+  font-size: 2.5rem;
+}
+
+header span {
+  color: #fff;
+}
+
+header .primary-navigation {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+header .primary-navigation li a {
+  padding: 10px;
+  color: #fff;
+  font-size: 1.3rem
+}
+
+/* DOWNLOAD CV SEÇÃO */
+.section-div {
+  animation: initialize .7s forwards;
+  background-color: #000;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /*Texto de um lado, foto do outro*/
+  justify-content: space-around;
+  align-items: center;
+  gap: 60px;
+  padding: 60px;
+}
+
+.section-div div {
+  margin-top: 120px;
+  align-self: start;
+  display: grid;
+  gap: 30px;
+}
+
+.section-div h2 {
+  font-family: 'Poppins';
+  font-weight: 600;
+  color: #f7f7f7;
+}
+
+.section-div div p {
+  font-family: 'Poppins';
+  font-wight: 200;
+  color: #f7f7f7;
+}
+
+.section-div div a {
+  justify-self: start;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+.section-div img {
+  max-width: 100%;
+}
+
+.typing::after {
+  content: '|';
+  margin-left: 5px;
+  opacity: 1;
+  animation: pisca .8s infinite;
+}
+
+@keyframes pisca {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes initialize {
+  from {
+    opacity: 0;
+    transform: translate(0, -60px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/*SEÇÃO PRINCIPAL SOBRE MIM*/
+main {
+  background-color: #111;
+  color: white;
+}
+
+main .about {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  justify-content: center;
+  padding: 40px;
+}
+
+.about-title {
+  margin: 30px 0;
+  grid-column: 1/-1;
+  text-align: center;
+  color: #fff;
+}
+
+.about-title h1 {
+  font-size: 2.5rem;
+  color: #ff5d56;
+  margin-bottom: 15px;
+}
+
+.about-title p {
+  color: #707070;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.about-title div {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.about-title span {
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #dc3545;
+}
+
+.about img {
+  animation: sideSection .5s ease-in-out forwards;
+  cursor: pointer;
+  grid-row: 2;
+  max-width: 100%;
+  border-radius: 4px;
+  filter: blur(0);
+}
+
+.about img:hover {
+  transition: .5s ease-in
+  filter: blur(1px)
+}
+
+.about-content {
+  animation: aboutSection .6s ease-in forwards;
+  grid-column: 2/-1;
+  display: grid;
+  color: #707070;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-text {
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-text h1 {
+  font-size: 2.3rem;
+  color: #fff;
+  grid-column: 1/-1;
+}
+
+.about-text h1::after {
+  background-color: #ff5d56;
+  height: 6px;
+  widht: 60px;
+  margin: 20px 0;
+  content: '';
+  display: block;
+  border-radius: 5px;
+}
+
+.about-text p {
+  font-size: 1.3rem;
+  grid-row: 2;
+  grid-column: 1/-1;
+}
+
+.about-info {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1/-1;
+  gap: 15px;
+  align-items: center;
+}
+
+.about-info i {
+  color: #dc3545;
+  display: inline-block;
+  padding-right: 15px;
+  font-size: 1.5rem;
+}
+
+.about-info p {
+  font-size: .9rem;
+}
+
+@keyframes aboutSection {
+  from {
+    transition: .5s;
+    transform: translate3d(60px, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sideSection {
+  from {
+    transition: .5s;
+    transform: translate3d(-60px, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* RESPONSIVIDADE */
+@media(max-width: 992px){
+  .section-div img {
+    display: none;
+  }
+
+  .section-div {
+    background-image: url('img/pessoa.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  header .primary-navigation {
+    display: none;
+  }
+
+  header i {
+    color: #f7f7f7;
+    font-size: 3rem;
+  }
+}
+
+@media(max-width: 992px){
+  .about img {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+
+  .about-content {
+    grid-column: 1/-1;
+  }
+}
