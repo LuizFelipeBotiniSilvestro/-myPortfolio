@@ -32,14 +32,31 @@ header span {
 
 header .primary-navigation {
   display: flex;
-  gap: 10px;
+  gap: 30px;
   align-items: center;
 }
 
 header .primary-navigation li a {
-  padding: 10px;
   color: #fff;
+  widht: 0px;
+  height: 0px
   font-size: 1.3rem
+}
+
+header .primary-navigation li a::after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  display: block;
+  border-bottom: 4px solid transparent;
+  transition: .5s;
+}
+
+header .primary-navigation li a:hover::after {
+  width: 100%;
+  height: 0px;
+  padding: 0px;
+  border-bottom: 4px solid #dc3545;
 }
 
 /* DOWNLOAD CV SEÇÃO */
@@ -200,7 +217,7 @@ main .about {
 .about-text h1::after {
   background-color: #ff5d56;
   height: 6px;
-  widht: 60px;
+  width: 60px;
   margin: 20px 0;
   content: '';
   display: block;
@@ -267,6 +284,10 @@ main .about {
     background-size: cover;
   }
 
+  header {
+    justify-content: space-between;
+    padding: 30px 70px;
+  }
   header .primary-navigation {
     display: none;
   }
@@ -274,6 +295,21 @@ main .about {
   header i {
     color: #f7f7f7;
     font-size: 3rem;
+  }
+
+  header .primary-navigation.activated {
+    background: linear-gradient(rgba(43, 42, 42, 0.176), rgba(46, 46, 46, 0.724));
+    position: absolute;
+    display: grid;
+    top: 80px;
+    color: white;
+    z-index: 5; // Conteúdo ficar na frente.
+    padding: 30px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: 0 0 4px 4px;
+    right: 10px;
+    animation: aboutSection .8s ease-in-out forwards; 
   }
 }
 
@@ -286,4 +322,94 @@ main .about {
   .about-content {
     grid-column: 1/-1;
   }
+}
+
+/* Section services */
+
+.services {
+  margin-top: -30px;
+  padding: 60px;
+  background-color: #151515;
+}
+.my-services {
+  padding: 60px;
+  color: white;
+}
+
+.my-services ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-services ul li {
+  cursor: pointer;
+  border-radius: 6px;
+  position: relative;
+  padding: 10px;
+  display: grid;
+  gap: 30px;
+  text-align: center;
+  max-width: 300px;
+  align-content: center;
+  height: 300px;
+  background-color: #222;
+}
+
+.my-services ul li i {
+  font-size: 2.7rem;
+  color: #dc3545;
+}
+
+.my-services ul li h3 {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.my-services ul li p {
+  color: #707070;
+  font-size: 1.1rem;
+}
+
+.my-services li::before {
+  content: '';
+  transition: .5s ease-in-out;
+  border-radius: 6px;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+.my-services li::after {
+  content: '';
+  transition: .5s ease-in-out;
+  border-radius: 6px;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+
+.my-services li:hover::before {
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid red;
+  border-right: 2px solid red;
+}
+
+.my-services li:hover::after {
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid red;
+  border-left: 2px solid red;
 }
