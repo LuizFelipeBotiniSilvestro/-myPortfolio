@@ -1,7 +1,8 @@
 // Declare consts.
 const title = document.querySelector('.typing');
-const activeMenu = document.querySelector('.fa-bars');
-const navMenu = document.querySelector('header .primary-navigation')
+const listAll = document.querySelectorAll('.projects-processing ul li');
+const buttonGeneral = document.querySelectorAll('.projects-models ul li');
+const buttonAll = document.querySelectorAll('.projects-models .all');
 
 // Functions
 function activateLyrics(element) {
@@ -14,14 +15,117 @@ function activateLyrics(element) {
     });
 }
 
-// Events
-activeMenu.addEventListener('click', () => {
-  activeMenu.classList.toggle('fa-x');
-  navMenu.classList.toggle('activated');
-})
+function menuMobol(){
+  const activeMenu = document.querySelector('.fa-bars');
+  const navMenu = document.querySelector('header .primary-navigation')
 
-// To call functions
+  activeMenu.addEventListener('click', () => {
+    activeMenu.classList.toggle('fa-x');
+    navMenu.classList.toggle('activated');
+  })
+}
+
+function aboutMe(){
+  const divExperience = document.querySelectorAll('.experience-content div');
+  const liExperience = document.querySelectorAll('.experience-content ul li');
+  const divEducation = document.querySelectorAll('.education-content div');
+  const liEducation = document.querySelectorAll('.education-content ul li');
+
+  divExperience[0].classList.add('active');
+  liExperience[0].classList.add('active');
+  divEducation[0].classList.add('active');
+  liEducation[0].classList.add('active');
+  
+  function slideShow(index){
+    divExperience.forEach((div)=> {
+      div.classList.remove('active');
+    });
+    liExperience.forEach((button)=> {
+      button.classList.remove('active');
+    });
+    
+    divExperience[index].classList.add('active');
+    liExperience[index].classList.add('active');
+  }
+  
+  function slideShow2(index){
+    divEducation.forEach((div)=> {
+      div.classList.remove('active');
+    });
+    liEducation.forEach((button)=> {
+      button.classList.remove('active');
+    });
+    divEducation[index].classList.add('active');
+    liEducation[index].classList.add('active');
+  }
+
+  // Add events to components.
+  liExperience.forEach((event, index)=>{
+    event.addEventListener('click', ()=>{
+      slideShow(index)
+    })
+  });
+
+  liEducation.forEach((event, index)=>{
+    event.addEventListener('click', ()=>{
+      slideShow2(index)
+    })
+  });
+}
+
+function projectsSection(){
+  function showList(loList, button = "all") {
+    loList.forEach((item) => {
+      item.style.display = "none";
+    });
+    
+    switch (button) {
+      case 'design':
+        loList.forEach((item) => {
+          if (item.classList.contains('design')) {
+            item.style.display = "block";
+          }
+        });
+        break;
+      case 'socket':
+        loList.forEach((item) => {
+          if (item.classList.contains('socket')) {
+            item.style.display = "block";
+          }
+        });
+        break;
+      case 'all':
+      default:
+        loList.forEach((item) => {
+          item.style.display = "block";
+        });
+        break;
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    function removeClick(index) {
+      buttonGeneral.forEach((item) => {
+        item.classList.remove('active');
+      });
+      buttonGeneral[index].classList.add('active');
+    }
+  
+    buttonGeneral.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        removeClick(index);
+        let currentButton = item.classList.contains('all') ? 'all' : item.classList.contains('design') ? 'design' : 'socket';
+        showList(listAll, currentButton);
+      });
+    });
+  });
+}
+
+// To call functions.
 activateLyrics(title);
+menuMobol();
+aboutMe();
+projectsSection();
 
 
 

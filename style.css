@@ -21,6 +21,7 @@ header {
   justify-content: space-around; /* Separado em colunas*/
 }
 
+
 header h1 {
   color: #dc3545;
   font-size: 2.5rem;
@@ -297,6 +298,7 @@ main .about {
     font-size: 3rem;
   }
 
+  /*Clique para mostrar/esconder menu.*/
   header .primary-navigation.activated {
     background: linear-gradient(rgba(43, 42, 42, 0.176), rgba(46, 46, 46, 0.724));
     position: absolute;
@@ -309,7 +311,7 @@ main .about {
     font-weight: bold;
     border-radius: 0 0 4px 4px;
     right: 10px;
-    animation: aboutSection .8s ease-in-out forwards; 
+    animation: aboutSection .2s ease-in-out forwards; 
   }
 }
 
@@ -412,4 +414,334 @@ main .about {
   height: 100%;
   border-bottom: 2px solid red;
   border-left: 2px solid red;
+}
+
+/* EXPERIENCES */
+.my-resume {
+  color: #fff;
+}
+
+.resume-generica {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 10px;
+  align-items: start;
+}
+
+.resume-generica h2 { 
+  font-size: 1.5rem;
+  background-color: #ff5f56;
+  justify-self: start;
+  padding: 10px;
+  border-radius: 3px;
+}
+.resume-generica i {
+  margin-right: 10px;
+}
+
+.experience {
+  margin-bottom: 30px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.education {
+  margin-bottom: 30px;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.experience-content ul {
+  color: #ff5d56;
+  gap: 10px;
+  display: flex;
+  cursor: pointer;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.resume-generica .experience-content div {
+  background-color: #222;
+  animation: sideSection .5s ease-in-out forwards;
+  display: none;
+  padding: 40px;
+  position: relative;
+}
+
+.resume-generica .experience-content div.active {
+  display: block;
+}
+
+.resume-generica .experience-content ul li.active {
+  color: #3e3d3d;
+}
+
+/* Efeito caixa de conversa*/
+/* Na div também tem que ter a position como relative*/
+.resume-generica .experience-content div::before {
+  content: '';
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid #222;
+  position: absolute; 
+  top: -20px;
+  left: 30px;
+  display: inline-block;
+}
+
+.resume-generica .experience-content div span {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.resume-generica .experience-content div h3 {
+  margin: 10px 0;
+}
+
+.resume-generica .experience-content div p {
+  color: #707070;
+  font-size: 1.1rem;
+}
+
+/* MEUS DIPLOMAS E CURSOS */
+.resume-generica .education-content div {
+  background-color: #222;
+  display: none;
+  animation: sideSection .5s ease-in-out forwards;
+  padding: 40px;
+  position: relative;
+}
+
+.education-content ul {
+  color: #ff5d56;
+  gap: 10px;
+  display: flex;
+  cursor: pointer;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.resume-generica .education-content div::before {
+  content: '';
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid #222;
+  position: absolute; 
+  top: -20px;
+  left: 30px;
+  display: inline-block;
+}
+
+.resume-generica .education-content div span {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.resume-generica .education-content div h3 {
+  margin: 10px 0;
+}
+
+.resume-generica .education-content div p {
+  color: #707070;
+  font-size: 1.1rem;
+}
+
+.resume-generica .education-content ul li.active {
+  color: #3e3d3d;
+}
+
+.resume-generica .education-content div.active {
+  display: block;
+}
+
+.courses {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: start;
+  padding: 30px;
+  gap: 30px;
+  justify-content: center;
+}
+
+.my-skills {
+  display: grid;
+}
+
+.my-skills h2 {
+  padding: 10px 30px;
+  border-radius: 3px;
+  background-color: #ff5f56;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  justify-self: start;
+}
+.my-skills h2 i {
+  padding-right: 10px;
+}
+
+.skills-content {
+  font-size: 1.5rem;
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+.skills-content h3 {
+  font-size: 1.5rem;
+}
+
+.skills-content ul {
+  display: flex;
+}
+
+@media (max-width: 1089px) {
+  .resume-generica .experience-content, .education-content{
+    justify-self: center;
+    grid-column: 1/-1;
+  }
+
+  .resume-generica .experience {
+    grid-column: 1/-1;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  .resume-generica .education {
+    grid-column: 1/-1;
+    grid-row: 3;
+    justify-self: center;
+    margin: 30px 0;
+  }
+
+  .courses {
+    grid-template-columns: 1fr;
+  }
+
+  .courses h2 {
+    justify-self: center;
+  }
+
+  .courses my-skills h2 {
+    justify-self: center;
+  }
+
+  .courses my-skills {
+    text-align: center;
+    grid-template-column: 1fr;
+    justify-self: center;
+    grid-column: 1/-1;
+  }
+}
+
+.projects {
+  padding: 30px;
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+  background-color: #151515;
+}
+
+.projects ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.projects-models ul li {
+  cursor: pointer;
+  background-color: #222;
+  border: 1px solid #333;
+  padding: 6px 30px;
+  color: #707070;
+}
+
+.projects-processing {
+    display: grid;
+    margin-top: 60px;
+    gap: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.projects-processing ul li {
+  max-widht: 100%;
+  height: 100%;
+
+}
+
+.projects-processing ul li img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  
+
+}
+
+.projects a {
+  background-color: #222;
+  text-decoration: none;
+  justify-self: center;
+  padding: 20px 40px;
+  border: 1px solid #333;
+  color: #707070;
+}
+
+.projects-models ul li.active {
+  background-color: #dc3545;
+  color: #151515;
+  font-weight: bold;
+}
+
+/* FOOTER */
+fotter {
+  background-color: #000000;
+  padding: 30px;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  color: #f7f7f7;
+}
+
+.footer-social li {
+  background-color: #212020;
+  border-radius: 50%;
+  border: 1px solid #333;
+}
+
+.footer-social li i { 
+  padding: 30px;
+  font-size: 1.5rem;
+  cikir: #f7f7f7;
+}
+
+.footer-social li:hover {
+  transition: .3s ease-in-out;
+  cursor: pointer;
+  background-color: #3e3d3d;
+}
+
+.footer-social::before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  widht: 200px;
+  bottom: -30px;
+  background-color: #222;
+}
+
+footer .footer-comercial {
+  text-align: center;
+  color: #ffff;
+  margin: 90px auto;
+  font-size: 1.5rem;
 }

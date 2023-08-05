@@ -3,36 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portifólio</title>
+  <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <header>
-    <h1>Dev <span>Saber</span></h1>
+    <h1>Luiz Felipe <span>Botini de Silvestro</span></h1>
     <nav>
       <ul aria-label="Navegação primária" class="primary-navigation">
-        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#resume">Resume</a></li>
-        <li><a href="#portfolio">Portifólio</a></li>
-        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#projects">My projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <i class="fa-solid fa-bars"></i>
     </nav>
   </header>
-  <section aria-label="Seção currículo download Luiz" class="section-div">
+  <section id="home" aria-label="Seção currículo download Luiz" class="section-div">
     <div>
       <h2>Hi There! I'm</h2>
-      <h2 class="typing">Web and Delphi developer</h2>
-      <p>Sou apaixonado por tecnologia e em como seu uso para o bem pode proporcionar maior qualidade de vida para as pessoas</p>
-      <a href="">Download CV</a>
+      <h2 class="typing">Delphi developer and studying web development (Node.JS and React).</h2>
+      <p>I am passionate about technology and I believe that its use can provide a better quality of life for people.</p>
+      <a href="curriculum.pdf" download>Download CV</a>
     </div>
     <img src="img/pessoa.png" alt="">
   </section>
   <main>
-    <article aria-label="seção sobre mim" class="about">
+    <article id="about" aria-label="seção sobre mim" class="about">
       <div class="about-title">
         <h1>About Me</h1>
         <p>Professional Profile - There is All About me</p>
@@ -46,11 +44,11 @@
       <div class="about-content">
         <div class="about-text">
           <h1>I'm Luiz Felipe Botini de Silvestro</h1>
-          <p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Quibusdam quos neque magni <br> provident officiis sequi aut, vel suscipit perferendis doloremque?</p>
+          <p>I always like to be studying and learning.<br> Here is some of my personal information.</p>
         </div>
         <div class="about-info">
           <p><i class="fa-solid fa-calendar-days"></i>Date of birth: 03 ago 2000</p>
-          <p><i class="fa-sharp fa-solid fa-laptop-code"></i>Web Developer</p>
+          <p><i class="fa-sharp fa-solid fa-laptop-code"></i>Delphi/Web Developer</p>
           <p><i class="fa-solid fa-location-dot"></i>Address: Siderópolis, Brazil</p>
           <p><i class="fa-sharp fa-solid fa-globe"></i>Spoken Langages: Brazil, English, Italian</p>
           <p><i class="fa-solid fa-flag"></i>Nacionality: Brazil</p>
@@ -74,22 +72,177 @@
       <ul aria-label="Navegação secundária">
         <li>
           <i class="fa-sharp fa-solid fa-pen-to-square"></i>
-          <h3>Web developer</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, tempore.</p>
+          <h3>Delphi developer</h3>
+          <p>I currently work as a delphi developer, being one of the responsible for the financial sector of the system. I have experience of having participated in large projects.</p>
         </li>
         <li>
           <i class="fa-sharp fa-solid fa-pen-to-square"></i>
-          <h3>Delphi developer</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, tempore.</p>
+          <h3>Web developer</h3>
+          <p>Web development fascinates me, I have been studying to be always improved and updated in the technologies of the market.</p>
         </li>
         <li>
           <i class="fa-sharp fa-solid fa-pen-to-square"></i>
           <h3>Financial</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, tempore.</p>
+          <p>During a long period of 9 years, I was able to learn and develop financial and administrative skills.</p>
         </li>
       </ul>
     </div>
   </section>
+  <div id="resume" class="my-resume">
+    <div class="about-title">
+      <h1>My Resume</h1>
+      <p>This is my summary!</p>
+      <div aria-label="Seção apenas de ilustrações de botões">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="resume-generica">
+      <h2 class="experience"><i class="fa-solid fa-handshake"></i>EXPERIENCE</h2>
+      <div class="experience-content">
+        <div>
+          <span>2013-2022</span>
+          <h3>Financal</h3>
+          <p>I worked as a financier for a company in Siderópolis - SC. Responsible for the company's financial and raw material purchasing sector.</p>
+        </div>
+        <div>
+          <span>2022-atual</span>
+          <h3>Developer</h3>
+          <p>Full Delphi developer along with PostgreSQL database, supporting responsibility for system financials.</p>
+        </div>
+        <ul>
+          <li><i class="fa-sharp fa-solid fa-circle"></i></li>
+          <li><i class="fa-sharp fa-solid fa-circle"></i></li>
+        </ul>
+      </div>
+      <h2 class="education"><i class="fa-solid fa-book"></i>EDUCATION</h2>
+      <div class="education-content">
+        <div>
+          <span>2018-2024</span>
+          <h3>Computer Science - Unesc</h3>
+          <p>The Bachelor's Degree in Computer Science aims to enable the student to use knowledge of innovative techniques in the area of technology and informatics. Develop a commitment to education and teaching in the field of Computer Science.</p>
+        </div>
+        <ul>
+          <li><i class="fa-sharp fa-solid fa-circle"></i></li>
+        </ul>
+      </div>
+    </div>
+    <div class="courses">
+      <div class="my-skills">
+        <h2><i class="fa-sharp fa-regular fa-star"></i>MY SKILL's</h2>
+        <div class="skills-content">
+          <h3>DELPHI</h3>
+          <ul>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+          </ul>
+        </div>
+        <div class="skills-content">
+          <h3>POSTGRESQL</h3>
+          <ul>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+          </ul>
+        </div>
+        <div class="skills-content">
+          <h3>HTML 5</h3>
+          <ul>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+          </ul>
+        </div>
+        <div class="skills-content">
+          <h3>CSS 3</h3>
+          <ul>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+          </ul>
+        </div>
+        <div class="skills-content">
+          <h3>JAVASCRIPT</h3>
+          <ul>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+          </ul>
+        </div>
+        <div class="skills-content">
+          <h3>TYPESCRIPT</h3>
+          <ul>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+          </ul>
+        </div>
+        <div class="skills-content">
+          <h3>REACT</h3>
+          <ul>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+          </ul>
+        </div>
+        <div class="skills-content">
+          <h3>NODEJS</h3>
+          <ul>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+            <li><i class="fa-sharp fa-solid fa-star"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="projects" class="projects">
+    <div class="about-title">
+      <h1>My Projects</h1>
+      <p>This is the section where I show some of my projects.</p>
+      <div aria-label="Seção apenas de ilustrações de projetos">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="projects-models">
+      <ul aria-label="Navegação entre modelos específicos de projetos">
+        <li class="all">All</li>
+        <li class="design">Design</li>
+        <li class="socket">Graphic</li>
+      </ul>
+    </div>
+    <div class="projects-processing">
+      <ul aria-label="Navegação de projetos e websites">
+        <li class="design"><img src="img-projects/my-portfolio.PNG" alt="Meu portfólio desenvolvido com HTML, CSS e JavaScript"></li>
+        <li class="socket"><img src="img-projects/call_system.PNG" alt="Sistema gerenciador de chamadas para sala de aula com NodeJS."></li>
+      </ul>
+    </div>
+    <a href="https://github.com/LuizFelipeBotiniSilvestro" target="_blank">Load More Projects - GitHub</a>
+  </section>
+
+  <footer id="contact">
+    <div class="about-title">
+      <h1>Luiz Felipe Botini de Silvestro</h1>
+      <p>These are the social networks I use. You can also follow me there.</p>
+    </div>
+    <nav aria-label="Navegação de links sociais">
+      <ul class="footer-social">
+        <li><a href="https://www.linkedin.com/in/luiz-felipe-botini-de-silvestro-773a43197/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        <li><a href="https://www.instagram.com/luizfelipebotini/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://github.com/LuizFelipeBotiniSilvestro" target="_blank"><i class="fa-brands fa-github-alt"></i></a></li>
+      </ul>
+    </nav>
+    <p class="footer-comercial">All rights reserved - <span>Luiz Felipe Botini de Silvestro</span>  &copy; - 2023</p>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
