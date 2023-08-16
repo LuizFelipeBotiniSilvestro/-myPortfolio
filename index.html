@@ -215,16 +215,30 @@
     </div>
     <div class="projects-models">
       <ul aria-label="Navegação entre modelos específicos de projetos">
-        <li class="all">All</li>
+        <li class="all active">All</li>
         <li class="design">Design</li>
         <li class="socket">Graphic</li>
       </ul>
     </div>
     <div class="projects-processing">
       <ul aria-label="Navegação de projetos e websites">
-        <li class="design"><img src="img-projects/my-portfolio.PNG" alt="Meu portfólio desenvolvido com HTML, CSS e JavaScript"></li>
-        <li class="socket"><img src="img-projects/call_system.PNG" alt="Sistema gerenciador de chamadas para sala de aula com NodeJS."></li>
+        <li class="design">
+          <img src="img-projects/my-portfolio.PNG" alt="Meu portfólio"
+               data-description="Portfólio pessoal para demostrar meus projetos, habilidades e experiências. Desenvolvido em HTML, CSS e JavaScript"></li>
+        <li class="socket">
+          <img src="img-projects/call_system.PNG" alt="Sistema gerenciador de chamadas para sala de aula com NodeJS."
+               data-description="Essa implementação foi realizada como parte de um trabalho acadêmico para a disciplina de Redes de Computadores na Unesc"></li>
       </ul>
+    </div>
+    <div id="overlay">
+      <div id="image-container">
+        <img id="enlarged-image" src="" alt="Imagem Ampliada">
+        <div id="image-description">
+          <h2></h2>
+          <p></p>
+        </div>
+        <span id="close-button">&times;</span>
+      </div>
     </div>
     <a href="https://github.com/LuizFelipeBotiniSilvestro" target="_blank">Load More Projects - GitHub</a>
   </section>

@@ -4,6 +4,12 @@ const listAll = document.querySelectorAll('.projects-processing ul li');
 const buttonGeneral = document.querySelectorAll('.projects-models ul li');
 const buttonAll = document.querySelectorAll('.projects-models .all');
 
+// Img projects
+const images = document.querySelectorAll('.projects-processing img');
+const overlay = document.getElementById('overlay');
+const enlargedImage = document.getElementById('enlarged-image');
+const closeButton = document.getElementById('close-button');
+
 // Functions
 function activateLyrics(element) {
     const arrayText = element.innerHTML.split('');
@@ -120,6 +126,25 @@ function projectsSection(){
     });
   });
 }
+
+images.forEach(image => {
+  image.addEventListener('click', () => {
+    const src = image.getAttribute('src');
+    const alt = image.getAttribute('alt');
+    const description = image.getAttribute('data-description'); // Adicione atributo data-description nas imagens
+    enlargedImage.setAttribute('src', src);
+    overlay.style.display = 'block';
+
+    // Preencher o texto explicativo
+    const imageDescription = document.getElementById('image-description');
+    imageDescription.querySelector('h2').textContent = alt;
+    imageDescription.querySelector('p').textContent = description;
+  });
+});
+
+closeButton.addEventListener('click', () => {
+  overlay.style.display = 'none';
+});
 
 // To call functions.
 activateLyrics(title);
