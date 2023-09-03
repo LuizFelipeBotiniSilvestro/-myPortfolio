@@ -781,8 +781,9 @@ main .about {
 #close-button {
   position: absolute;
   top: 10px;
+  color: Red;
   right: 10px;
-  font-size: 24px;
+  font-size: 34px;
   cursor: pointer;
 }
 
