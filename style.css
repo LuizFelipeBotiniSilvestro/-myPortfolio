@@ -366,6 +366,7 @@ main .about {
   align-content: center;
   height: 300px;
   background-color: #222;
+  flex-grow: 1;
 }
 
 .my-services ul li i {
@@ -632,7 +633,7 @@ main .about {
 
   .resume-generica .experience {
     grid-column: 1/-1;
-    grid-row: 1;
+    grid-row: 3;
     justify-self: center;
   }
 
@@ -671,10 +672,13 @@ main .about {
   background-color: #151515;
 }
 
-.projects ul {
+/* Estilos para a navegação entre modelos específicos de projetos */
+.projects-models ul {
+  list-style: none;
   display: flex;
   justify-content: center;
   gap: 30px;
+  padding: 0;
 }
 
 .projects-models ul li {
@@ -685,25 +689,45 @@ main .about {
   color: #707070;
 }
 
-/* Container principal dos projetos */
-.projects-processing {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr); /* Uma coluna para dispositivos menores */
-  gap: 30px;
-  justify-content: center;
-  margin-top: 60px;
+.projects-models li {
+  cursor: pointer;
+  background-color: #222;
+  border: 1px solid #333;
+  padding: 6px 30px;
+  color: #707070;
 }
 
-/* Lista de projetos */
+/* Estilos para a grade de projetos */
 .projects-processing ul {
-  list-style: none; /* Remova marcadores de lista */
-  padding: 0; /* Remova o preenchimento padrão da lista */
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Duas colunas por linha */
+  gap: 30px;
+  padding: 0;
 }
+
 
 /* Estilo para cada item de projeto */
 .projects-processing li {
   width: 100%; /* Ocupa todo o espaço disponível na coluna */
   height: 100%;
+  margin: 0 auto; /* Centraliza o elemento horizontalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Adicione uma sombra suave para destacar o elemento */
+  border-radius: 8px;
+  background-color: #fff; /* Cor de fundo */
+  transition: transform 0.2s; /* Efeito de transformação suave ao passar o mouse */
+  cursor: pointer;
+}
+
+/* Pseudo-classe para o efeito de hover */
+.projects-processing li:hover {
+  transform: translateY(-10px); /* Move ligeiramente para cima ao passar o mouse */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
 }
 
 /* Estilo para a imagem dentro do item do projeto */
@@ -732,19 +756,33 @@ main .about {
   font-weight: bold;
 }
 
+#image-container {
+  text-align: center;
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
 #enlarged-image {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 100%;
+  max-height: 60vh;
   display: block;
   margin: 0 auto;
+}
+
+#image-description h2 {
+  font-size: 20px;
+  margin-top: 10px;
 }
 
 #close-button {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 40px;
-  color: red;
+  font-size: 24px;
   cursor: pointer;
 }
 
