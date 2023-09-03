@@ -142,6 +142,35 @@ images.forEach(image => {
   });
 });
 
+// Função para avançar para a próxima experiência
+function nextExperience() {
+  const experienceContainer = document.getElementById("experience-carousel");
+  const experiences         = experienceContainer.querySelectorAll("div");
+  const currentExperience  = experienceContainer.querySelector(".active");
+
+  // Encontra o índice da experiência atual
+  const currentIndex = Array.from(experiences).indexOf(currentExperience);
+
+  // Remove a classe 'active' da experiência atual
+  currentExperience.classList.remove("active");
+
+  // Calcula o índice da próxima experiência, considerando um loop
+  const nextIndex = (currentIndex + 1) % experiences.length;
+
+  // Adiciona a classe 'active' à próxima experiência
+  experiences[nextIndex].classList.add("active");
+
+  // Atualiza o identificador da experiência
+  const experienceIdentifier = document.getElementById("experience-identifier");
+  experienceIdentifier.textContent = `${nextIndex + 1}/${experiences.length}`;
+}
+
+// Função para iniciar a transição automática
+function startExperienceCarousel() {
+  // Inicia a transição automaticamente a cada 5 segundos
+  setInterval(nextExperience, 3000);
+}
+
 closeButton.addEventListener('click', () => {
   overlay.style.display = 'none';
 });
@@ -151,6 +180,7 @@ activateLyrics(title);
 menuMobol();
 aboutMe();
 projectsSection();
+startExperienceCarousel();
 
 
 
