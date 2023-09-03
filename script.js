@@ -166,10 +166,21 @@ function nextExperience() {
 }
 
 // Função para iniciar a transição automática
-function startExperienceCarousel() {
+//function startExperienceCarousel() {
   // Inicia a transição automaticamente a cada 5 segundos
-  setInterval(nextExperience, 3000);
-}
+  //setInterval(nextExperience, 3000);
+//}
+
+// Adicione eventos de clique a cada bolinha
+document.getElementById('bullet-1').addEventListener('click', function () {
+  // Chame a função nextExperience() para avançar manualmente
+  nextExperience();
+});
+
+document.getElementById('bullet-2').addEventListener('click', function () {
+  // Chame a função nextExperience() para avançar manualmente
+  nextExperience();
+});
 
 closeButton.addEventListener('click', () => {
   overlay.style.display = 'none';

@@ -424,7 +424,7 @@ main .about {
   border-left: 2px solid red;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .my-services ul li {
     width: 100%; /* Defina a largura para 100% em telas menores */
     max-width: none; /* Remova a largura máxima para que os elementos possam se expandir */
@@ -505,6 +505,12 @@ main .about {
   display: inline-block;
 }
 
+/* Estilo padrão do identificador */
+#experience-identifier {
+  color: #707070; /* Cor cinza padrão */
+  font-size: 1rem; /* Tamanho da fonte  */
+}
+
 .resume-generica .experience-content div span {
   color: #dc3545;
   font-weight: bold;
@@ -567,6 +573,12 @@ main .about {
 
 .resume-generica .education-content div.active {
   display: block;
+}
+
+/* Estilo padrão do identificador */
+#education-identifier {
+  color: #707070; /* Cor cinza padrão */
+  font-size: 1rem; /* Tamanho da fonte  */
 }
 
 .courses {
@@ -673,25 +685,37 @@ main .about {
   color: #707070;
 }
 
+/* Container principal dos projetos */
 .projects-processing {
-    display: grid;
-    margin-top: 60px;
-    gap: 20px;
-    justify-content: center;
-    grid-template-columns: repeat(1, 1fr);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Uma coluna para dispositivos menores */
+  gap: 30px;
+  justify-content: center;
+  margin-top: 60px;
 }
 
-.projects-processing ul li {
-  max-widht: 100%;
+/* Lista de projetos */
+.projects-processing ul {
+  list-style: none; /* Remova marcadores de lista */
+  padding: 0; /* Remova o preenchimento padrão da lista */
+}
+
+/* Estilo para cada item de projeto */
+.projects-processing li {
+  width: 100%; /* Ocupa todo o espaço disponível na coluna */
   height: 100%;
 }
 
-.projects-processing ul li img {
+/* Estilo para a imagem dentro do item do projeto */
+.projects-processing img {
   max-width: 100%;
-  height: 100%;
-  border-radius: 4px;
+  height: 100%; /* Mantenha a proporção da imagem */
+  border-radius: 8px;
   cursor: pointer;
+  display: block; /* Remova espaços indesejados abaixo da imagem */
+  margin: 0 auto; /* Centralize a imagem horizontalmente */
 }
+
 
 .projects a {
   background-color: #222;
@@ -719,8 +743,8 @@ main .about {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 24px;
-  color: white;
+  font-size: 40px;
+  color: red;
   cursor: pointer;
 }
 
