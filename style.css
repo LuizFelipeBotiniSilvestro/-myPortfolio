@@ -65,7 +65,7 @@ header .fa-bars {
   position: relative; /* Adicione essa propriedade */
   z-index: 2;
   /* Outros estilos aqui */
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 /* DOWNLOAD CV SEÇÃO */
@@ -422,6 +422,13 @@ main .about {
   height: 100%;
   border-bottom: 2px solid red;
   border-left: 2px solid red;
+}
+
+@media (max-width: 767px) {
+  .my-services ul li {
+    width: 100%; /* Defina a largura para 100% em telas menores */
+    max-width: none; /* Remova a largura máxima para que os elementos possam se expandir */
+  }
 }
 
 /* EXPERIENCES */
