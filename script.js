@@ -86,16 +86,16 @@ function projectsSection(){
     });
     
     switch (button) {
-      case 'design':
+      case 'backend':
         loList.forEach((item) => {
-          if (item.classList.contains('design')) {
+          if (item.classList.contains('backend')) {
             item.style.display = "block";
           }
         });
         break;
-      case 'socket':
+      case 'frontend':
         loList.forEach((item) => {
-          if (item.classList.contains('socket')) {
+          if (item.classList.contains('frontend')) {
             item.style.display = "block";
           }
         });
@@ -120,7 +120,7 @@ function projectsSection(){
     buttonGeneral.forEach((item, index) => {
       item.addEventListener('click', () => {
         removeClick(index);
-        let currentButton = item.classList.contains('all') ? 'all' : item.classList.contains('design') ? 'design' : 'socket';
+        let currentButton = item.classList.contains('all') ? 'all' : item.classList.contains('backend') ? 'backend' : 'frontend';
         showList(listAll, currentButton);
       });
     });

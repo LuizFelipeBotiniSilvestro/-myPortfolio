@@ -35,6 +35,7 @@ header .primary-navigation {
   display: flex;
   gap: 30px;
   align-items: center;
+  margin-top: 60px;
 }
 
 header .primary-navigation li a {
@@ -58,6 +59,13 @@ header .primary-navigation li a:hover::after {
   height: 0px;
   padding: 0px;
   border-bottom: 4px solid #dc3545;
+}
+
+header .fa-bars {
+  position: relative; /* Adicione essa propriedade */
+  z-index: 2;
+  /* Outros estilos aqui */
+  margin-top: 50px;
 }
 
 /* DOWNLOAD CV SEÇÃO */
@@ -663,13 +671,12 @@ main .about {
     margin-top: 60px;
     gap: 20px;
     justify-content: center;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .projects-processing ul li {
   max-widht: 100%;
   height: 100%;
-
 }
 
 .projects-processing ul li img {
@@ -677,8 +684,6 @@ main .about {
   height: 100%;
   border-radius: 4px;
   cursor: pointer;
-  
-
 }
 
 .projects a {
